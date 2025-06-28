@@ -1,0 +1,80 @@
+:root {
+  --ssa-error-bg: #fff1f0;
+  --ssa-error-border: #ffa39e;
+  --ssa-error-text: #cf1322;
+  --ssa-btn-bg: #cf1322;
+  --ssa-btn-hover-bg: #a8071a;
+  --ssa-btn-text: #ffffff;
+}
+
+@-webkit-keyframes ssa-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes ssa-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.site-sage-ai-missing-file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  margin: 1em 0;
+  background-color: var(--ssa-error-bg);
+  border: 1px solid var(--ssa-error-border);
+  border-radius: 4px;
+  color: var(--ssa-error-text);
+  text-align: center;
+  -webkit-animation: ssa-fade-in 0.3s ease-out;
+  animation: ssa-fade-in 0.3s ease-out;
+}
+
+.site-sage-ai-missing-file .ssa-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.site-sage-ai-missing-file .ssa-message {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+.site-sage-ai-missing-file .ssa-retry-btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 0.95rem;
+  background-color: var(--ssa-btn-bg);
+  color: var(--ssa-btn-text);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.site-sage-ai-missing-file .ssa-retry-btn:hover {
+  background-color: var(--ssa-btn-hover-bg);
+}
+
+.site-sage-ai-missing-file .ssa-retry-btn:focus-visible {
+  outline: 2px solid var(--ssa-btn-text);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .site-sage-ai-missing-file {
+    padding: 1em;
+  }
+  .site-sage-ai-missing-file .ssa-icon {
+    font-size: 2.5rem;
+  }
+  .site-sage-ai-missing-file .ssa-retry-btn {
+    width: 100%;
+  }
+}
